@@ -12,6 +12,10 @@ class Vehicle extends Model
   public function reservations() {
     return $this->hasMany(Reservation::class);
   }
-  protected $fillable = ['title','price','picture','fuel','seat','quantity','code','year'];
+
+ /* public function devises(){
+    return $this->belongsTo(Devise::class);
+  }*/
+  protected $fillable = ['title','price','picture','fuel','seat','quantity','code','year'/*,'devise_id'*/];
 
 }

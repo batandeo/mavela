@@ -85,7 +85,7 @@
             <div class="col-lg-4" style="margin-top: 30px;">
                 <div class="categories_post">
                     <img src="../storage/picture/{{$vehicle->picture}}" alt="post">
-                    <div class="categories_details">
+                    <div class="categories_details" style="top: 0px;left: 0px;right: 0px;min-height: 260px;">
                         <div class="categories_text">
                             <a href="#"><h5>{{$vehicle->title}}</h5></a>
                             <div class="border_line"></div>

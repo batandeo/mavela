@@ -16,8 +16,8 @@ class CreatVehicleTbl extends Migration
 
     Schema::create('devises', function (Blueprint $table) {
       $table->increments('id');
-      $table->integer('price');
-      $table->string('description');
+      $table->integer('libelle');
+      $table->string('price');
       $table->timestamps();
     });
 
@@ -32,7 +32,7 @@ class CreatVehicleTbl extends Migration
       $table->integer('quantity');
       $table->string('code');
       $table->string('year');
-
+      $table->unsignedInteger('devise_id');
       $table->foreign('devise_id')->references('id')->on('devises')
         ->onDelete('restrict')
         ->onUpdate('restrict');
