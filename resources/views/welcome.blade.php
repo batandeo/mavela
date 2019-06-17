@@ -21,6 +21,15 @@
     <!-- main css -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+
+    <style>
+        .banner_content h2 {
+            text-shadow: 4px 4px 4px #000;
+        }
+        .banner_content p {
+            text-shadow: 4px 4px 4px #000;
+        }
+    </style>
 </head>
 <body>
 
@@ -30,7 +39,7 @@
         <div class="container">
             <div class="top_inner">
                 <div class="float-left" style="margin-left: 230px">
-                    <a href="#"><i class="fa fa-phone"></i>  +(233)0222xxxxx</a>
+                    <a href="#"><i class="fa fa-phone"></i>  +233 24 880 4343</a>
                     <a href="#"><i class="fa fa-envelope"></i>  info@mavela-rentals.com</a>
                     <a href="#"><i class="fa fa-address-book"></i>  #21 Avenue C, North Legon, Accra</a>
                 </div>
@@ -41,7 +50,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="#"><img src="img/logo-marvel-rentals.png" alt=""><img src="img/logo-marvel-rentals.png" alt=""></a>
+                <a class="navbar-brand logo_h" href="#"><img src="img/logo-02.png" alt=""><img src="img/logo-02.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -64,14 +73,15 @@
 <!--================Header Menu Area =================-->
 
 <!--================Home Banner Area =================-->
-<section class="home_banner_area" style="background: url(../img/banner/header3.jpg) no-repeat scroll center center;background-size: cover;">
+<section class="home_banner_area" style="background: url(../img/banner/header5.jpeg) no-repeat scroll center center;background-size: cover;">
     <div class="banner_inner">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="banner_content">
-                        <h2>Precise concept design <br />for stylish living</h2>
-                        <p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.</p>
+                        <h2>WE MAKE RENTING AS EASY AS A.B.C.</h2>
+                        <p style="font-size: 15px;">
+                            Rent a car with us today at our highly affordable prices & enjoy premium services.</p>
                         <a class="banner_btn" href="#services">Get Started</a>
                     </div>
                 </div>
@@ -103,23 +113,26 @@
     <div class="container" >
         <div class="main_title">
             <h2>Our services</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <p>RENTING? OUR SERVICE QUALITY ARE UNMATCHED.</p>
+            <p> We have a wide range of over 110 cars for all kinds of occasions, be it an executive car, holiday car, group travel cars or an everyday car, we have you covered.</p>
         </div>
         <div class="blog_inner row">
             @foreach ($vehicles as $vehicle)
             <div class="col-lg-4">
                 <div class="o_blog_item">
                     <div class="blog_img">
-                        <img class="img-fluid"  src="../storage/picture/{{$vehicle->picture}}" alt="">
+                        <img class="img-fluid"  src="../storage/picture/{{$vehicle->picture}}" alt="" style="height: 230px;">
                     </div>
                     <div class="blog_text">
                         <div class="blog_cat">
                                 <a class="active" href="{{ route('vehicles.edit', $vehicle->id) }}">Rent</a>
-                                <a><span style="font-weight: bold">days:</span> $ {{$vehicle->price}} p.d</a>
+                                <a><span style="font-weight: bold">Price:</span> $ {{$vehicle->price}}/day</a>
                                 <a><span style="font-weight: bold">Quantity:</span> {{$vehicle->quantity}}</a>
                         </div>
                         <a href="#"><h4>{{$vehicle->title}}</h4></a>
-                        <p>The Fuel is : {{$vehicle->fuel}} and there are {{$vehicle->seat}} seats.</p>
+                        <p><b>Details</b></p>
+                        <p>Fuel Type: {{$vehicle->fuel}}.</p>
+                        <p>Number of Seats: {{$vehicle->seat}}</p>
 
                         <span>Year:</span> <b>{{$vehicle->year}}</b>
 
@@ -137,7 +150,7 @@
 <footer class="footer_area p_120">
     <div class="container">
         <div class="row footer_inner">
-            <div class="col-lg-5 col-sm-6">
+            <div class="col-lg-6 col-sm-6">
                 <aside class="f_widget ab_widget">
                     <div class="f_title">
                         <h3>About Us</h3>
@@ -148,9 +161,9 @@
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                 </aside>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-2 col-sm-6">
                 <aside class="f_widget news_widget">
-                    <div class="f_title">
+                  {{--  <div class="f_title">
                         <h3>Newsletter</h3>
                     </div>
                     <p>Stay updated with our latest news</p>
@@ -162,15 +175,15 @@
                             </div>
                             <div class="mt-10 info"></div>
                         </form>
-                    </div>
+                    </div>--}}
                 </aside>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <aside class="f_widget social_widget">
                     <div class="f_title">
                         <h3>Call Us</h3>
                     </div>
-                    <p>contact:  +(233)0222xxxxx</p>
+                    <p>contact:  +233 24 880 4343</p>
                    <p>info@mavela-rentals.com</p>
                     <p> #21 Avenue C, North Legon, Accra</p>
                 </aside>

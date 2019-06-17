@@ -37,7 +37,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="#"><img src="img/logo-marvel-rentals.png" alt=""><img src="img/logo-marvel-rentals.png" alt=""></a>
+                <a class="navbar-brand logo_h" href="#"><img src="img/logo-02.png" alt=""><img src="img/logo-02.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -93,17 +93,15 @@
                     <div class="info_item">
                         <i class="lnr lnr-home"></i>
                         <h6>#21 Avenue C, North Legon, Accra</h6>
-                        <p>Santa monica bullevard</p>
                     </div>
                     <div class="info_item">
                         <i class="lnr lnr-phone-handset"></i>
-                        <h6><a href="#">+(233)0222xxxxx</a></h6>
+                        <h6><a href="#">+233 24 880 4343</a></h6>
                         <br>
                     </div>
                     <div class="info_item">
                         <i class="lnr lnr-envelope"></i>
                         <h6><a href="#">info@mavela-rentals.com</a></h6>
-                        <p>Send us your query anytime!</p>
                     </div>
                 </div>
             </div>
@@ -150,9 +148,9 @@
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                 </aside>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-2 col-sm-6">
                 <aside class="f_widget news_widget">
-                    <div class="f_title">
+                 {{--   <div class="f_title">
                         <h3>Newsletter</h3>
                     </div>
                     <p>Stay updated with our latest news</p>
@@ -164,15 +162,15 @@
                             </div>
                             <div class="mt-10 info"></div>
                         </form>
-                    </div>
+                    </div>--}}
                 </aside>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <aside class="f_widget social_widget">
                     <div class="f_title">
                         <h3>Call Us</h3>
                     </div>
-                    <p>contact:  +(233)0222xxxxx</p>
+                    <p>contact:  +233 24 880 4343</p>
                     <p>info@mavela-rentals.com</p>
                     <p> #21 Avenue C, North Legon, Accra</p>
                 </aside>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 14 juin 2019 à 17:09
+-- Généré le :  Dim 16 juin 2019 à 20:27
 -- Version du serveur :  10.1.34-MariaDB
 -- Version de PHP :  7.2.8
 
@@ -30,11 +30,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `devises` (
   `id` int(10) UNSIGNED NOT NULL,
-  `libelle` int(11) NOT NULL,
+  `libelle` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `devises`
+--
+
+INSERT INTO `devises` (`id`, `libelle`, `price`, `created_at`, `updated_at`) VALUES
+(1, 'Dollar to Cedi', '5.32', '2019-06-14 00:00:00', '2019-06-16 15:54:15');
 
 -- --------------------------------------------------------
 
@@ -217,7 +224,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `lastname`, `phone_number`, `age`, `adress`, `country`, `city`, `region`, `code_postal`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'kc', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'kc@gmail.com', NULL, '$2y$10$PM/j7GZG0.g4VFqQAOJHiuJes5Ctg5ygH3Ws6tTmwZe4R0F2da5EO', 'haEEYDgRzGrvmmFfQxok7OtFeW4sGiyNEFgnecCyR79rVvjmvFy8OAR5yggC', '2019-06-14 07:55:11', '2019-06-14 07:55:11');
+(1, 'kc', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'kc@gmail.com', NULL, '$2y$10$PM/j7GZG0.g4VFqQAOJHiuJes5Ctg5ygH3Ws6tTmwZe4R0F2da5EO', 'Pwi1uFGxJPle2MWrfUS9yGCVbR7i2xcl9IrPoFCeX0hcDtWklC5MGB1vflOy', '2019-06-14 07:55:11', '2019-06-14 07:55:11');
 
 -- --------------------------------------------------------
 
@@ -245,11 +252,24 @@ CREATE TABLE `vehicles` (
 --
 
 INSERT INTO `vehicles` (`id`, `title`, `picture`, `price`, `fuel`, `seat`, `quantity`, `code`, `year`, `devise_id`, `created_at`, `updated_at`) VALUES
-(1, 'Range Rover Sport', '1_1560499032.png', '150', 'Petrol', 5, 1, 'Range Rover Sport-Petrol-5', '2018', NULL, '2019-06-14 07:57:13', '2019-06-14 07:57:13'),
-(3, 'Mercedes Benz, E-Class E350', '1_1560499198.png', '100', 'Disel', 5, 2, 'Mercedes Benz, E-Class E350 - Disel - 5', '2014', NULL, '2019-06-14 07:59:58', '2019-06-14 07:59:58'),
-(4, 'Mercedes Benz, ML350 4Matic', '1_1560499290.png', '130', 'Petrol', 5, 2, 'Mercedes Benz, ML350 4Matic - Petrol - 5', '2015', NULL, '2019-06-14 08:01:30', '2019-06-14 08:01:30'),
-(5, 'Mercedes Benz, S-Class S550', '1_1560499395.png', '150', 'Petrol', 5, 4, 'Mercedes Benz, S-Class S550 - Petrol - 5', '2016', NULL, '2019-06-14 08:03:15', '2019-06-14 08:03:15'),
-(6, 'Toyota LandCruiser V8', '1_1560499548.png', '140', 'Petrol', 7, 17, 'Toyota LandCruiser V8- Petrol -7', '2015', NULL, '2019-06-14 08:05:48', '2019-06-14 08:05:48');
+(1, 'Range Rover Sport', '1_1560499032.png', '150', 'Petrol', 5, 1, 'Range Rover Sport-Petrol-5', '2018', 1, '2019-06-14 07:57:13', '2019-06-14 07:57:13'),
+(3, 'Mercedes Benz, E-Class E350', '1_1560499198.png', '100', 'Disel', 5, 2, 'Mercedes Benz, E-Class E350 - Disel - 5', '2014', 1, '2019-06-14 07:59:58', '2019-06-14 07:59:58'),
+(4, 'Mercedes Benz, ML350 4Matic', '1_1560499290.png', '130', 'Petrol', 5, 2, 'Mercedes Benz, ML350 4Matic - Petrol - 5', '2015', 1, '2019-06-14 08:01:30', '2019-06-14 08:01:30'),
+(5, 'Mercedes Benz, S-Class S550', '1_1560499395.png', '150', 'Petrol', 5, 4, 'Mercedes Benz, S-Class S550 - Petrol - 5', '2016', 1, '2019-06-14 08:03:15', '2019-06-14 08:03:15'),
+(6, 'Toyota LandCruiser V8', '1_1560499548.png', '140', 'Petrol', 7, 17, 'Toyota LandCruiser V8- Petrol -7', '2015', 1, '2019-06-14 08:05:48', '2019-06-14 08:05:48'),
+(8, 'Toyota LandCruiser Prado', 'prado_1560705895.png', '125', 'Disel', 7, 6, 'oyota LandCruiser Prado -7 - Disel', '2014', 1, '2019-06-16 17:24:55', '2019-06-16 17:24:55'),
+(9, 'Toyota Fortuner', '1_1560706505.png', '120', 'Petrol', 7, 4, 'Toyota Fortuner-7-Petrol', '2015', 1, '2019-06-16 17:35:05', '2019-06-16 17:35:05'),
+(10, 'Toyota Hilux', '1_1560706596.png', '110', 'Disel', 5, 14, 'Toyota Hilux - 5 PDisel', '2015', 1, '2019-06-16 17:36:37', '2019-06-16 17:36:37'),
+(11, 'Toyota Corolla', '1_1560706719.png', '80', 'Petrol', 5, 9, 'Toyota Corolla - 5 - Pedrol', '2010', 1, '2019-06-16 17:38:39', '2019-06-16 17:38:39'),
+(12, 'Toyota Camry', '1_1560706835.png', '90', 'Petrol', 5, 5, 'Toyota Camry - 5 -Petrol', '2011', 1, '2019-06-16 17:40:35', '2019-06-16 17:40:35'),
+(13, 'Hyundai Accent', '1_1560707140.png', '80', 'Petrol', 5, 9, 'Hyundai Accent - 5 - Petrol', '2014', 1, '2019-06-16 17:45:40', '2019-06-16 17:45:40'),
+(14, 'Hyundai Elantra', '1_1560707245.png', '90', 'Petrol', 5, 11, 'Hyundai Elantra - 5 -Petrol', '2015', 1, '2019-06-16 17:47:25', '2019-06-16 17:47:25'),
+(15, 'Hyundai SantaFe', '1_1560707375.png', '100', 'Petrol', 5, 4, 'Hyundai SantaFe - 5 -Petrol', '2015', 1, '2019-06-16 17:49:35', '2019-06-16 17:49:35'),
+(16, 'Mitsibushi Pajero', '1_1560707472.png', '120', 'Disel', 7, 7, 'Mitsibushi Pajero -7 - Disel', '2013', 1, '2019-06-16 17:51:12', '2019-06-16 17:51:12'),
+(17, 'Kia Sorento', '1_1560707569.png', '100', 'Petrol', 5, 3, 'Kia Sorento - 5 - Petrol', '2016', 1, '2019-06-16 17:52:49', '2019-06-16 17:52:49'),
+(18, 'Nissan Versa', '1_1560707683.png', '90', 'Petrol', 5, 8, 'Nissan Versa - 5 - Petrol', '2016', 1, '2019-06-16 17:54:43', '2019-06-16 17:54:43'),
+(19, 'Nissan Versa (Hatchback)', '1_1560708108.png', '80', 'Petrol', 5, 5, 'Nissan Versa (Hatchback)', '2009', 1, '2019-06-16 18:01:48', '2019-06-16 18:01:48'),
+(20, 'Honda Civic', '1_1560708216.png', '80', 'Petrol', 5, 4, 'Honda Civic - 5 - Petrol', '2011', 1, '2019-06-16 18:03:36', '2019-06-16 18:03:36');
 
 --
 -- Index pour les tables déchargées
@@ -348,7 +368,7 @@ ALTER TABLE `vehicles`
 -- AUTO_INCREMENT pour la table `devises`
 --
 ALTER TABLE `devises`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `migrations`
@@ -396,7 +416,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `vehicles`
 --
 ALTER TABLE `vehicles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Contraintes pour les tables déchargées

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Devise;
 use App\Reservation;
 use App\User;
 use App\Vehicle;
@@ -15,6 +16,11 @@ class ReservationController extends Controller
 
     $vehicle = Vehicle::findOrFail($request);
     $vehicle->price = $request->input('price');
+    $vehicle->id = $request->input('id');
+    $vehicle->devise_id = $request->input('devise_id');
+    $devise_id =  $vehicle->devise_id;
+    $devise = Devise::find($devise_id);
+   // dd($devise->price);
     $price = $vehicle->price;
     Session()->flash('price',$price);
     //dd($vehicle->price );
@@ -53,15 +59,23 @@ class ReservationController extends Controller
     $location_pick = $reservation->location_pick;
     $drop_off_location_time = $reservation->drop_off_location_time;
 
-
+    //$vehicle_dollar = Vehicle::with('Vehicle', 'Devise')->get();
+    //dd($vehicle_dollar);
+   // $dollar = Devise::all();
+    //$rec = $dollar->price;
+   // dd($rec);
     //dd($date_return);
     $conver1 = Carbon::parse($date_rent);
     $conver2 = Carbon::parse($date_return);
     $diff = $conver1->diffInDays($conver2);
     $tot = $diff*$vehicle->price;
+    $dollar = $tot * $devise->price;
+    //dd($dollar);
+    //$tot_dollar = $tot*$rec;
     Session()->flash('diff',$diff);
     Session()->flash('time_pick',$time_pick);
     Session()->flash('tot',$tot);
+    Session()->flash('dollar',$dollar);
 
     return view('reservations.index');
     // dd($vehicles);

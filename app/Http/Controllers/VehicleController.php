@@ -71,6 +71,7 @@ class VehicleController extends Controller
     $vehicle->price = $request->input('price');
     $vehicle->picture = $fileNameTostore;
     $vehicle->code = $request->input('code');
+    $vehicle->devise_id = 1;
     $vehicle->save();
     Session()->flash('notif','Vehicle has saved succesful');
     return redirect('vehicle/store');

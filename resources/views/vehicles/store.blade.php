@@ -127,7 +127,7 @@
                             <td>{{$vehicle->fuel}}</td>
                             <td> <img style="width: 100px; height: 100px" src="../storage/picture/{{$vehicle->picture}}"></td>
                             <td>
-                                <a type="submit" class="btn bg-purple margin" href="{{ route('vehicles.edit', $vehicle->id) }}"><i class="fa fa-edit"></i></a>
+                                {{--<a type="submit" class="btn bg-purple margin" href="{{ route('vehicles.edit', $vehicle->id) }}"><i class="fa fa-edit"></i></a>--}}
                                 <button type="submit" class="btn bg-maroon btn-flat margin" data-toggle="modal" data-target="{{'#modal-default-'.$vehicle->id}}"><i class="fa fa-trash-o"></i></button>
                                 <div class="modal fade" id="{{'modal-default-'.$vehicle->id}}">
                                     <div class="modal-dialog">

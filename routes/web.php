@@ -59,6 +59,9 @@ Route::post('vehicle/store', 'VehicleController@store');
 // Laravel auth route.
 Auth::routes();
 
+Route::resource('dollars', 'DeviseController');
+Route::get('dollar', 'DeviseController@index');
+
 //Route::get('/', 'LoginController@index');
 //Route::get('/', 'PostController@index')->name('home');
 // Users resource route.

@@ -137,7 +137,7 @@
                     <ul class="treeview-menu">
                         {{--<li><a href="{{url('type/store')}}"><i class="fa fa-circle-o"></i> Type of car</a></li>--}}
                         <li><a href="{{url('vehicle/store')}}"><i class="fa fa-circle-o"></i> New car</a></li>
-                        <li><a href="{{url('vehicle/liste')}}"><i class="fa fa-circle-o"></i> Liste of cars</a></li>
+                        <li><a href="{{url('dollar')}}"><i class="fa fa-circle-o"></i> Update dollar</a></li>
                     </ul>
                 </li>
 

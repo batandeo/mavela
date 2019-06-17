@@ -22,6 +22,48 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 </head>
+<style>
+
+    .categories_details:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .categories_text {
+        display: flex;
+        margin-top: 240px;
+    }
+
+    .categories_details:hover{
+        transform: scale(1.2, 1.2);
+    }
+
+    .categories_details{
+        top: 0px !important;left: 0px !important;right: 0px !important; min-height: 220px;
+        position: relative;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.15);
+        transition: all 0.3s ease-in-out;
+        background: none !important;
+        min-width: 100%;
+    }
+
+    /* Fade in the pseudo-element with the bigger shadow */
+    .categories_details:hover:after {
+        opacity: 1;
+    }
+
+</style>
 <body>
 
 <!--================Header Menu Area =================-->
@@ -29,8 +71,8 @@
     <div class="top_menu">
         <div class="container">
             <div class="top_inner">
-                <div class="float-left">
-                    <a href="#"><i class="fa fa-phone"></i>  +(233)0222xxxxx</a>
+                <div class="float-left" style="margin-left: 230px">
+                    <a href="#"><i class="fa fa-phone"></i>  +233 24 880 4343</a>
                     <a href="#"><i class="fa fa-envelope"></i>  info@mavela-rentals.com</a>
                     <a href="#"><i class="fa fa-address-book"></i>  #21 Avenue C, North Legon, Accra</a>
                 </div>
@@ -41,7 +83,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="#"><img src="img/logo-marvel-rentals.png" alt=""><img src="img/logo-marvel-rentals.png" alt=""></a>
+                <a class="navbar-brand logo_h" href="#"><img src="img/logo-02.png" alt=""><img src="img/logo-02.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -68,8 +110,8 @@
         <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="" style="background: url(../img/banner/header1.jpg) no-repeat scroll center center; background-size: cover"></div>
         <div class="container">
             <div class="blog_b_text text-center">
-                <h2>Dude You’re Getting <br /> a Telescope</h2>
-                <p>There is a moment in the life of any aspiring astronomer that it is time to buy that first</p>
+                <h2 style="font-size: 36px; text-shadow: 4px 4px 4px #000;">RENTING? OUR SERVICE QUALITIES ARE UNMATCHED</h2>
+                <p style="text-shadow: 4px 4px 4px #000;">We have a wide range of over 110 cars for all kinds of occasions, be it an executive car, holiday car, group travel cars or an everyday car, we have you <covered class=""></covered></p>
                 <a class="white_bg_btn" href="#blog_categorie_area">View More</a>
             </div>
         </div>
@@ -82,14 +124,14 @@
     <div class="container">
         <div class="row">
             @foreach ($vehicles as $vehicle)
-            <div class="col-lg-4" style="margin-top: 30px;">
+            <div class="col-lg-4" style="margin-top: 40px;">
                 <div class="categories_post">
-                    <img src="../storage/picture/{{$vehicle->picture}}" alt="post">
-                    <div class="categories_details" style="top: 0px;left: 0px;right: 0px;min-height: 260px;">
+                    <img src="../storage/picture/{{$vehicle->picture}}" alt="post" style="height: 220px">
+                    <div class="categories_details" style="">
                         <div class="categories_text">
-                            <a href="#"><h5>{{$vehicle->title}}</h5></a>
-                            <div class="border_line"></div>
-                            <p>Quantity: {{$vehicle->quantity}}</p>
+                            <a href="#"><h5 style="color: #000; font-size: 12px">{{$vehicle->title}}</h5></a>
+                            <b style="margin-right: 4px;margin-left: 4px; color: #000"> | </b>
+                            <p style="color: #000; font-size: 12px">Quantity: {{$vehicle->quantity}}</p>
                         </div>
                     </div>
                 </div>
@@ -116,9 +158,9 @@
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                 </aside>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-2 col-sm-6">
                 <aside class="f_widget news_widget">
-                    <div class="f_title">
+                {{--    <div class="f_title">
                         <h3>Newsletter</h3>
                     </div>
                     <p>Stay updated with our latest news</p>
@@ -130,15 +172,15 @@
                             </div>
                             <div class="mt-10 info"></div>
                         </form>
-                    </div>
+                    </div>--}}
                 </aside>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <aside class="f_widget social_widget">
                     <div class="f_title">
                         <h3>Call Us</h3>
                     </div>
-                    <p>contact:  +(233)0222xxxxx</p>
+                    <p>contact: +233 24 880 4343</p>
                     <p>info@mavela-rentals.com</p>
                     <p> #21 Avenue C, North Legon, Accra</p>
                 </aside>

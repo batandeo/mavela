@@ -29,8 +29,8 @@
     <div class="top_menu">
         <div class="container">
             <div class="top_inner">
-                <div class="float-left">
-                    <a href="#"><i class="fa fa-phone"></i>  +(233)0222xxxxx</a>
+                <div class="float-left" style="margin-left: 230px">
+                    <a href="#"><i class="fa fa-phone"></i>  +233 24 880 4343</a>
                     <a href="#"><i class="fa fa-envelope"></i>  info@mavela-rentals.com</a>
                     <a href="#"><i class="fa fa-address-book"></i>  #21 Avenue C, North Legon, Accra</a>
                 </div>
@@ -41,7 +41,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="#"><img src="img/logo-marvel-rentals.png" alt=""><img src="img/logo-marvel-rentals.png" alt=""></a>
+                <a class="navbar-brand logo_h" href="#"><img src="img/logo-02.png" alt=""><img src="img/logo-02.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -67,7 +67,7 @@
 <!--================Home Banner Area =================-->
 <section class="banner_area">
     <div class="banner_inner d-flex align-items-center">
-        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="" style="background: url(../img/banner/header2.jpg) no-repeat scroll center; background-size: cover"></div>
+        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="" style="background: url(../img/banner/header6.jpeg) no-repeat scroll center; background-size: cover"></div>
         <div class="container">
             <div class="banner_content text-center">
                 <h2>ABOUT</h2>
@@ -160,9 +160,9 @@
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                 </aside>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-2 col-sm-6">
                 <aside class="f_widget news_widget">
-                    <div class="f_title">
+                {{--    <div class="f_title">
                         <h3>Newsletter</h3>
                     </div>
                     <p>Stay updated with our latest news</p>
@@ -174,15 +174,15 @@
                             </div>
                             <div class="mt-10 info"></div>
                         </form>
-                    </div>
+                    </div>--}}
                 </aside>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <aside class="f_widget social_widget">
                     <div class="f_title">
                         <h3>Call Us</h3>
                     </div>
-                    <p>contact:  +(233)0222xxxxx</p>
+                    <p>contact:  +233 24 880 4343</p>
                     <p>info@mavela-rentals.com</p>
                     <p> #21 Avenue C, North Legon, Accra</p>
                 </aside>
